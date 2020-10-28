@@ -10,12 +10,17 @@ import Profile from '../routes/profile';
 const App = () => (
 	<div id="app">
 		<Header />
+		<nav className="nav">
+			<a href="/">Home</a>
+			<a href="/about">About</a>
+			<a href="/contact">Contact</a>
+		</nav>
 		<Router>
 			<Home path="/" />
 			<Profile path="/profile/" user="me" />
 			<Profile path="/profile/:user" />
 		</Router>
 	</div>
-)
+);
 
 export default App;
